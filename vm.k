@@ -26,13 +26,15 @@ IN:{if[~b@-1+#b;while[|/"!#"=*r:RL 0;if["!"=*r;. 1_r]];b,:|"i"$r,"\n"];POP x}
 OUT:{1"c"$G x;x+1}
 NOOP:(::)
 o:`HALT`SET`PUSH`POP`EQ`GT`JMP`JT`JF`ADD`MULT`MOD`AND`OR`NOT`RMEM`WMEM`CALL`RET`OUT`IN`NOOP
-REG:@[;32768+!8]
-STACK:32776_
-x:1;r:0:`commands.txt;b:32776#|(32776#0i),(0x0/:0x0000,)'0N 2#|1:`challenge.bin
+E:{o[G x]x+1}
+L:32776#|(32776#0i),(0x0/:0x0000,)'0N 2#|1::
+REG::b 32768+!8
+STACK::32776_b
+x:1;r:0:$[#.z.x;`$.z.x 0;`commands.txt];b:L`challenge.bin
 \
-x:(~0=){o[G x]x+1}/x            / play til end
+x:(~0=)E/x                      / execute til end
 / take step - display next index, register, stack and opcodes
-x:0N!{o[G x]x+1} x;0N!REG b;0N!STACK b;0N!x _ b;
+x:0N!E x;0N!REG;0N!STACK;0N!x _ b;
 
 / puzzle
 / _ + _ * _^2 + _^3 - _ = 399
@@ -67,30 +69,3 @@ a:{[s;R8;m;n]s[t:1]:m;while[t;m:s t;t-:1;n:$[m=0;M15 n+1;m=1;M15 n+R8+1;m=2;M15 
 / Local Variables:
 / q-msg-prefix: "k)"
 / End:
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
