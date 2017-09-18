@@ -191,5 +191,5 @@ Five more codes are discovered by solving the remaining puzzles:
 The challenge was designed to attract competent programmers.
 Successfully completing the challenge may get you an interview at
 Synacor.  For me, completing the challenge was prize enough. The
-closing [screenshot](Screen Shot 2016-01-16 at 9.37.19 AM.png) is an
+closing [screenshot](Screen%20Shot%202016-01-16%20at%209.37.19%20AM.png) is an
 awesome souvenir.
